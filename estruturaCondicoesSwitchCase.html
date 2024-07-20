@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Estrutura de Condição - Uso do Switch Case</title>
+
+    <script>
+        var salario = 0;
+        var fatorAumento = 0;
+        var cargo = "Estagiário";
+        console.log(salario)
+        console.log(fatorAumento)
+        console.log(cargo)
+
+         /*Definir o aumento de salário dependendo do cargo:
+            Estagiário = 100%
+            Analista = 50%
+            Gerente = 30%
+            Presidente = 10
+        */
+
+        function atualizar(){
+            salarioNovo = Number(document.getElementById("salario").value);
+            cargoNovo = document.getElementById("cargo").value;
+            console.log(salarioNovo)
+            console.log(cargoNovo)
+
+            switch(cargoNovo) {
+                case 'Estagiário': fatorAumento = 2; break;
+                case 'Analista': fatorAumento = 1.5; break;
+                case 'Gerente': fatorAumento = 1.3; break;
+                case 'Presidente': fatorAumento = 1.1; break;
+                default: alert("O novo cargo é inválido!")
+             }
+       
+            const salarioComAumento = salarioNovo * fatorAumento;
+            
+            console.log(salarioComAumento);
+
+            document.getElementById("resultado").innerHTML = "O resultado do novo salário é R$ " + salarioComAumento
+            
+    }
+
+           
+    </script>   
+
+
+    <body>
+        <p>Digite o valor do salário: 
+            <input id="salario">     
+        </p>
+
+        <p>Digite o cargo: 
+            <input id="cargo">     
+        </p>
+
+        <button onclick="atualizar()">Atualizar</button>
+
+        <p id="resultado">O resultado do novo salário é: </p>
+
+          
+        
+    </body>
+    
+</head>
