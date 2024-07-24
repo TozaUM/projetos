@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Estrutura de repetição com While</title>
+        <meta charset="utf-8">
+
+    <script>
+        //definição das variáveis
+        let contador = 1;
+        let soma = 0;
+        let nota = 0;
+
+        //entrada da quantidade de notas
+        const qtdNotas = Number(prompt("Defina a quantidade de notas para o cálculo da média"));
+
+        //estutura de repetição While
+        while(contador <= qtdNotas){
+            nota = Number(prompt("Digite a nota "+ contador))
+            soma = soma + nota;
+            contador++
+        }
+
+        //saida dos resultaos
+        console.log("Quantidade de notas: " + qtdNotas);
+        console.log("Soma das notas: " + soma);
+        media = soma / qtdNotas;
+        console.log("Média das notas: " + media);
+
+        /* If ternário para saída da situação da média: 
+        média >= 7 : APROVADO
+        média <7 : REPROVADO
+        */
+
+        const resultado = media >= 7 ? "APROVADO" : "REPROVADO";
+
+        //saída do resultado da média
+
+        console.log("Resultado : " + resultado)
+
+    </script>
+        
+    </head>
+    <body>
+
+
+
+    </body>
+</html>
