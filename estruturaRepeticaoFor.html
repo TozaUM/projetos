@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Estrutura de repetição com For</title>
+        <meta charset="UTF-8">
+
+    <script>
+        //definição das variáveis
+        let soma = 0;
+        let nota = 0;
+
+        //entrada da quantidade de notas
+        const qtdNotas = Number(prompt("Defina a quantidade de notas para o cálculo da média"));
+
+        /* Estutura de repetição do FOR
+            for( variavel de inicialização; condição para a repetição do laço; incremento ou decremento){
+            bloco de instruções
+            }
+        */
+        
+        for (let i = 1; i <= qtdNotas; i++){
+            nota = Number(prompt('Digite a nota ' + i))
+            soma += nota;
+        }
+
+        //Cáculo da média
+        const media = soma / qtdNotas;
+
+        //saida dos resultaos
+        console.log("Quantidade de notas: " + qtdNotas);
+        console.log("Soma das notas: " + soma);
+        console.log("Média das notas: " + media);
+
+        /* If ternário para saída da situação da média: 
+        média >= 7 : APROVADO
+        média <7 : REPROVADO
+        */
+
+        const resultado = media >= 7 ? "APROVADO" : "REPROVADO";
+
+        //saída do resultado da média
+
+        console.log("Resultado : " + resultado)
+
+    </script>
+        
+    </head>
+    <body>
+
+
+
+    </body>
+</html>
